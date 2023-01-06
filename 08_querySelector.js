@@ -1,4 +1,4 @@
-() => {
+const main = () => {
   // change background color of the buttons with each div
   let blue = document.querySelectorAll(".btn");
 
