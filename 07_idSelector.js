@@ -4,3 +4,5 @@ function idSelector() {
   //return the content of the element
   return element.textContent;
 }
+
+module.exports = idSelector;
