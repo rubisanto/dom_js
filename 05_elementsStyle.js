@@ -4,5 +4,6 @@
   element.forEach((button) => {
     button.style.color = "red";
   });
+  console.log(element);
   return element;
 };
