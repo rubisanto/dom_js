@@ -1,17 +1,16 @@
 const main = () => {
-  // change background color of the buttons with each div
-  let blue = document.querySelectorAll(".btn");
-
-  let grey = document.querySelector(".secondary");
-  let yellow = document.querySelector(".warning");
-  let red = document.querySelector(".danger");
-
-  blue.forEach((button) => {
-    button.style.backgroundColor = "blue";
+  let buttons = document.querySelectorAll("button");
+  buttons.forEach(function (button) {
+    if (button.classList.contains("danger")) {
+      button.style.backgroundColor = "red";
+    } else if (button.classList.contains("warning")) {
+      button.style.backgroundColor = "yellow";
+    } else if (button.classList.contains("secondary")) {
+      button.style.backgroundColor = "grey";
+    } else {
+      button.style.backgroundColor = "blue";
+    }
   });
-  grey.style.backgroundColor = "grey";
-  yellow.style.backgroundColor = "yellow";
-  red.style.backgroundColor = "red";
 };
 
 main();
