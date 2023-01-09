@@ -13,3 +13,5 @@ const main = () => {
   yellow.style.backgroundColor = "yellow";
   red.style.backgroundColor = "red";
 };
+
+main();
