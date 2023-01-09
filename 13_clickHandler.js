@@ -1,5 +1,5 @@
 // Sélectionne l'élément button#clickme
-let button = document.querySelector("button#clickme");
+let button = document.querySelector("#clickme");
 
 // Ajoute un gestionnaire d'événement de clic à l'élément button
 button.addEventListener("click", function () {
