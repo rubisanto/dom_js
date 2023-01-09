@@ -1,6 +1,6 @@
 const main = () => {
   let element = document.querySelector("button");
-  element.style.color = "red";
+  element.style.backgroundColor = "red";
   return element;
 };
 
