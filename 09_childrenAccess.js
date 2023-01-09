@@ -1,8 +1,8 @@
 function childrenAccess() {
-  // find the first li element of the ul list with the id "menu"
-  let element = document.querySelector("#menu li");
-
-  return element;
+  var menu = document.getElementById("menu");
+  var firstItem = menu.children[0];
+  var content = firstItem.textContent;
+  return content;
 }
 
 module.exports = childrenAccess;
