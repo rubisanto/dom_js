@@ -1,8 +1,7 @@
 // Sélectionne le formulaire
 let form = document.querySelector("form");
 
-// Sélectionne le champ de formulaire "fontsize"
-let fontSizeField = form.querySelector("#fontsize");
+let fontSizeField = document.querySelector("input[value='fontsize']");
 
 // Sélectionne les éléments possédant la classe "controlled_fontsize"
 let elements = document.querySelectorAll(".controlled_fontsize");
