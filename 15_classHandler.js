@@ -3,7 +3,7 @@ let button = document.createElement("button");
 button.id = "toggle";
 
 // Sélectionne l'élément div#modal
-let modal = document.querySelector("div#modal");
+let modal = document.querySelector("#modal");
 
 // Ajoute un gestionnaire d'événement de clic au bouton
 button.addEventListener("click", function () {
