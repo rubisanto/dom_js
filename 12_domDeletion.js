@@ -1,10 +1,8 @@
 const main = () => {
-  //remove all the p element
-  let element = document.querySelectorAll("p");
-  element.forEach((p) => {
-    p.remove();
+  let paragraphs = document.querySelectorAll("p");
+  paragraphs.forEach(function (paragraph) {
+    paragraph.remove();
   });
-  return element;
 };
 
 main();
