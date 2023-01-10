@@ -1,49 +1,40 @@
-// pour le html
-// <!-- Champ input pour saisir la tâche -->
-// {
-/* <input type="text" id="taskInput">
-<!-- Bouton pour ajouter la tâche -->
-<button id="addTodo">Ajouter</button>
-<!-- Liste ul pour afficher les tâches -->
-<ul id="todoList"></ul> */
-// }
+// Récupère les éléments de la page
+let input = document.querySelector("input[type='text']");
+let addButton = document.querySelector("#addTodo");
+let todoList = document.querySelector("ul");
 
-// Sélect
+// Ajoute un gestionnaire d'événement sur le bouton d'ajout
+addButton.addEventListener("click", function () {
+  // Récupère la valeur saisie dans le champ de saisie
+  let task = input.value;
 
-// Sélectionne le champ input et le bouton
-let taskInput = document.querySelector("#taskInput");
-let addTodoButton = document.querySelector("#addTodo");
-// Sélectionne la liste ul
-let todoList = document.querySelector("#todoList");
+  // Crée un nouvel élément de liste
+  let newTodo = document.createElement("li");
+  newTodo.textContent = task;
 
-// Ajoute un gestionnaire d'événement de clic au bouton "Ajouter"
-addTodoButton.addEventListener("click", function () {
-  // Récupère la valeur saisie dans le champ input
-  let task = taskInput.value;
+  // Crée un bouton de suppression
+  let deleteButton = document.createElement("button");
+  deleteButton.textContent = "Supprimer";
 
-  // Vérifie si la valeur saisie n'est pas vide
-  if (task) {
-    // Crée un nouvel élément li avec la tâche saisie
-    let li = document.createElement("li");
-    li.textContent = task;
+  // Ajoute un gestionnaire d'événement de clic sur le bouton de suppression
+  deleteButton.addEventListener("click", function () {
+    newTodo.remove();
+  });
 
-    // Crée un bouton "Supprimer" pour chaque tâche
-    let removeButton = document.createElement("button");
-    removeButton.textContent = "Supprimer";
+  // Ajoute le bouton de suppression à l'élément de liste
+  newTodo.appendChild(deleteButton);
 
-    // Ajoute un gestionnaire d'événement de clic au bouton "Supprimer"
-    removeButton.addEventListener("click", function () {
-      // Supprime l'élément li de la liste
-      todoList.removeChild(li);
-    });
+  // Ajoute l'élément de liste à la liste ul existante
+  todoList.appendChild(newTodo);
 
-    // Ajoute le bouton "Supprimer" à l'élément li
-    li.appendChild(removeButton);
+  // Réinitialise le champ de saisie
+  input.valuetodoInput.value = "";
+});
 
-    // Ajoute l'élément li à la liste ul
-    todoList.appendChild(li);
-
-    // Réinitialise le champ input
-    taskInput.value = "";
+// Ajoute un gestionnaire d'événement de clic à chaque bouton "Supprimer"
+todoList.addEventListener("click", function (event) {
+  if (event.target.matches("button")) {
+    // Supprime le li parent de l'élément ciblé (bouton)
+    event.target.parentNode.remove();
   }
 });
