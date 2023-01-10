@@ -13,8 +13,7 @@ submitButton.addEventListener("click", function (event) {
   let fields = form.querySelectorAll("input, button");
 
   // Crée une balise p avec l'ID "result"
-  let p = document.createElement("p");
-  p.id = "result";
+  let p = document.querySelector("#result");
 
   // Pour chaque champ de formulaire, ajoute le nom et la valeur à la balise p
   fields.forEach(function (field) {
