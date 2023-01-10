@@ -1,4 +1,3 @@
-// Sélectionne l'élément div avec l'ID "square"
 let square = document.querySelector("#square");
 
 // Ajoute un gestionnaire d'événement de touche de clavier à la fenêtre
