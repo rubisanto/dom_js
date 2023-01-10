@@ -1,6 +1,5 @@
-// Crée un bouton avec l'ID "toggle"
-let button = document.createElement("button");
-button.id = "toggle";
+// Sélectioner un bouton avec l'ID "toggle"
+let button = document.querySelector("#toggle");
 
 // Sélectionne l'élément div#modal
 let modal = document.querySelector("#modal");
