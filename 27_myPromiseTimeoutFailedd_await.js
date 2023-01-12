@@ -1,4 +1,5 @@
 import { sleep, sleepThrow } from "./25_myPromiseTimeoutFailed.js";
+import { sleep } from "./24_myPromiseTimeout_await.js";
 
 let successButton = document.getElementById("success");
 let failButton = document.getElementById("fail");
