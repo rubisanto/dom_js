@@ -4,11 +4,15 @@ let button = document.querySelector("button");
 button.addEventListener("click", function () {
   //   sleepThrow() function throws an error with newPromise((resolve, reject) => {reject("error")}) without then
   //   or await
-  function sleepThrow(ms, reject) {
+  function sleepThrow(ms) {
     return new Promise((resolve) => {
       setTimeout(function () {
-        resolve();
+        if (ms === 2000) {
+          resolve();
+        } else {
+          reject("error");
+        }
       }, ms);
-    }, reject("error"));
+    });
   }
 });
