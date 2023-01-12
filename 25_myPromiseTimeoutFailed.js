@@ -1,7 +1,7 @@
 const sleepThrow = (ms, boolean) => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      if (boolean) {
+      if (boolean === true) {
         resolve("success");
       } else {
         reject("failed");
