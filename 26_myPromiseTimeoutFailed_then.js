@@ -1,5 +1,3 @@
-import { sleepThrow } from "./25_myPromiseTimeoutFailed.js";
-
 let successButton = document.getElementById("success");
 let failButton = document.getElementById("fail");
 

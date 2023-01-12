@@ -10,4 +10,6 @@ const sleepThrow = (ms, boolean) => {
   });
 };
 
-module.exports = sleepThrow;
+try {
+  module.exports = sleepThrow;
+} catch (error) {}
