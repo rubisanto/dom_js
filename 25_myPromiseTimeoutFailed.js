@@ -16,3 +16,5 @@ button.addEventListener("click", function () {
     });
   }
 });
+
+module.exports = sleepThrow;
