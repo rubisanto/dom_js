@@ -1,10 +1,12 @@
 let button = document.querySelector("button");
 
-// add event listener to button
-button.addEventListener("click", async function () {
-  // sleep fuction to create a p element in the DOM
-  await sleep(2000);
-  let p = document.createElement("p");
-  p.textContent = "hello world";
+button.addEventListener("click", async () => {
+  await sleep(2000); // attend 2 secondes
+  const p = document.createElement("p");
+  p.textContent = "Element ajouté après 2 secondes";
   document.body.appendChild(p);
 });
+
+async function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
