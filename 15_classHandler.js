@@ -5,7 +5,7 @@ let button = document.querySelector("#toggle");
 let modal = document.querySelector("#modal");
 
 // Ajoute un gestionnaire d'événement de clic au bouton
-button.addEventListener("click", function () {
+button.addEventListener("click", () => {
   // Ajoute ou retire la classe "is-open" de l'élément div#modal
   modal.classList.toggle("is-open");
 });
