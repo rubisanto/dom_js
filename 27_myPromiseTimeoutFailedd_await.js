@@ -1,12 +1,9 @@
-import { sleep, sleepThrow } from "./25_myPromiseTimeoutFailed.js";
-import { sleep } from "./24_myPromiseTimeout_await.js";
-
 let successButton = document.getElementById("success");
 let failButton = document.getElementById("fail");
 
 successButton.addEventListener("click", async function () {
   try {
-    await sleep(3000);
+    await sleepThrow(3000, true);
     let success = document.createElement("p");
     success.classList.add("success");
     success.innerHTML = "Request succeeded";
@@ -18,7 +15,7 @@ successButton.addEventListener("click", async function () {
 
 failButton.addEventListener("click", async function () {
   try {
-    await sleepThrow(3000);
+    await sleepThrow(3000, false);
     let success = document.createElement("p");
     success.classList.add("success");
     success.innerHTML = "Request succeeded";
