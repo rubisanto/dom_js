@@ -2,7 +2,7 @@ let successButton = document.getElementById("success");
 let failButton = document.getElementById("fail");
 
 successButton.addEventListener("click", (e) => {
-  sleepThrow(3000, e.target.id === "success")
+  sleepThrow(3000, true)
     .then(() => {
       let success = document.createElement("p");
       success.classList.add("success");
