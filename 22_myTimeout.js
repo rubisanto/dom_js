@@ -2,9 +2,9 @@
 let button = document.querySelector("button");
 
 // add event listener to button
-button.addEventListener("click", function () {
+button.addEventListener("click", () => {
   // setTimeout function to create a p element in the dom
-  setTimeout(function () {
+  setTimeout(() => {
     let p = document.createElement("p");
     p.textContent = "hello world";
     document.body.appendChild(p);
