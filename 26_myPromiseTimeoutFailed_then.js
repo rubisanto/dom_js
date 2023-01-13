@@ -1,7 +1,19 @@
+const sleepThrow = (ms, boolean) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (boolean === true) {
+        resolve("success");
+      } else {
+        reject("failed");
+      }
+    }, ms);
+  });
+};
+
 let successButton = document.getElementById("success");
 let failButton = document.getElementById("fail");
 
-successButton.addEventListener("click", (e) => {
+successButton.addEventListener("click", async (e) => {
   sleepThrow(3000, true)
     .then(() => {
       let success = document.createElement("p");
@@ -14,7 +26,7 @@ successButton.addEventListener("click", (e) => {
     });
 });
 
-failButton.addEventListener("click", () => {
+failButton.addEventListener("click", async () => {
   sleepThrow(3000, false)
     .then(() => {
       let fail = document.createElement("p");
