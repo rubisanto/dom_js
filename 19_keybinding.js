@@ -1,28 +1,20 @@
-let square = document.querySelector("#square");
+//déplacer le carré de 10px dans la direction donné par les touches du clavier (haut bas gauche droite)
 
-// Ajoute un gestionnaire d'événement de touche de clavier à la fenêtre
-window.addEventListener("keydown", function (event) {
-  // Obtient la position actuelle du carré en utilisant offsetLeft et offsetTop
-  let x = square.offsetLeft;
-  let y = square.offsetTop;
+let square = document.querySelector("div#square");
 
-  // Vérifie la touche appuyée et modifie la position du carré en conséquence
+document.addEventListener("keydown", (event) => {
   switch (event.key) {
     case "ArrowUp":
-      y -= 10; // Déplace le carré vers le haut de 10px
+      square.style.top = parseInt(square.style.top) - 10 + "px";
       break;
     case "ArrowDown":
-      y += 10; // Déplace le carré vers le bas de 10px
+      square.style.top = parseInt(square.style.top) + 10 + "px";
       break;
     case "ArrowLeft":
-      x -= 10; // Déplace le carré vers la gauche de 10px
+      square.style.left = parseInt(square.style.left) - 10 + "px";
       break;
     case "ArrowRight":
-      x += 10; // Déplace le carré vers la droite de 10px
+      square.style.left = parseInt(square.style.left) + 10 + "px";
       break;
   }
-
-  // Définit la nouvelle position du carré en utilisant style.left et style.top
-  square.style.left = `${x}px`;
-  square.style.top = `${y}px`;
 });
